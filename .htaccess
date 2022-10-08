@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteRule ^$ pages/index.php 
+RewriteRule ^home$ pages/index.php
+RewriteRule ^customers$ pages/customers.php
+RewriteRule ^invoices$ pages/invoices.php
+RewriteRule ^products$ pages/products.php
+RewriteRule ^api/customers$ api/customers.php
+ErrorDocument 404 /pages/404.php
