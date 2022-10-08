@@ -5,4 +5,6 @@ RewriteRule ^customers$ pages/customers.php
 RewriteRule ^invoices$ pages/invoices.php
 RewriteRule ^products$ pages/products.php
 RewriteRule ^api/customers$ api/customers.php
+RewriteRule ^api/products$ api/products.php
+RewriteRule ^api/invoices$ api/invoices.php
 ErrorDocument 404 /pages/404.php
