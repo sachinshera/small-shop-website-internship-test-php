@@ -15,7 +15,7 @@
             </li>
 
             <li class="nav-item">
-            <a class="nav-link <?php if($currentPage =="/customers"){ echo 'active'; }; ?>" aria-current="page" href="/customers">Customer</a>
+            <a class="nav-link <?php if($currentPage =="/customers"){ echo 'active'; }; ?>" aria-current="page" href="/customers">Customers</a>
             </li>
 
 

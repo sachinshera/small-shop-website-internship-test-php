@@ -35,7 +35,7 @@ header('Content-Type: application/json');
             // check if login_id exist
             $sql = "SELECT * FROM customers WHERE login_id = '$login_id'";
             $result = $db->query($sql);
-            if($result->num_rows > 0){
+            if($result && $result->num_rows > 0){
                 // set 400 status code
                 http_response_code(400);
                 echo json_encode(array("message" => "Login Id already exist"));
@@ -100,14 +100,14 @@ header('Content-Type: application/json');
         // check login_id in delete method
 
     
-        if(delete("login_id")){
-            $login_id = delete("login_id");
+        if(delete("id")){
+            $login_id = delete("id");
             // check if login_id exist
-            $sql = "SELECT * FROM customers WHERE login_id = '$login_id'";
+            $sql = "SELECT * FROM customers WHERE id = '$login_id'";
             $result = $db->query($sql);
             if($result->num_rows > 0){
                 // delete from database
-                $sql = "DELETE FROM customers WHERE login_id = '$login_id'";
+                $sql = "DELETE FROM customers WHERE id = '$login_id'";
                 $result = $db->query($sql);
                 if($result){
                     // set 200 status code

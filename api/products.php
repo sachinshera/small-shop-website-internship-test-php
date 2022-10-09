@@ -10,6 +10,7 @@ include "extractData.php";
 // get all products from products table
 // check methods
 
+
 if($_SERVER['REQUEST_METHOD'] == "GET"){
     // get all products from products table
     $sql = "SELECT * FROM products";
@@ -108,8 +109,8 @@ else if ($_SERVER['REQUEST_METHOD'] == "DELETE"){
 
 else{
     // set 405 status code
-    http_response_code(405);
-    echo json_encode(array("message" => "Method Not Allowed"));
+    // http_response_code(405);
+    echo json_encode(array("message" => "Method Not Allowed","method"=>$_SERVER['REQUEST_METHOD']));
 }
 
 
